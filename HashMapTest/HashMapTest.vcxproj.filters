@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="哈希表">
+      <UniqueIdentifier>{e7a8c8cd-bfc4-442c-b89b-7a1baeddc190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="红黑树">
+      <UniqueIdentifier>{3fa2d012-8f2c-4777-b39c-55b3e4af1a33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="栈">
+      <UniqueIdentifier>{e21ff228-ac98-4f3e-aeb0-6df07d3b9bc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="内存不足Handle">
+      <UniqueIdentifier>{f798136c-60f7-4abe-bdf6-d892331d5d4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="异常">
+      <UniqueIdentifier>{a29e603f-9dbe-467f-b545-a90e1e66de87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="字符串转换工具">
+      <UniqueIdentifier>{46859f57-2896-420d-b8f6-60cb02de102c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="HashMap.h">
+      <Filter>哈希表</Filter>
+    </ClInclude>
+    <ClInclude Include="BRTree.h">
+      <Filter>红黑树</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>栈</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryHandle.h">
+      <Filter>内存不足Handle</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
+    <ClInclude Include="OutRangeException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
+    <ClInclude Include="DataStructException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
+    <ClInclude Include="string_utils.h">
+      <Filter>字符串转换工具</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="HashMapTest.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="string_utils.cpp">
+      <Filter>字符串转换工具</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
