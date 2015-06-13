@@ -8,6 +8,9 @@
 #include <iostream>
 #include <string>
 #include <stdexcept>
+#include "string_utils.h"
+
+#define THROW_EXCEPTION(A) SSUtils->format(A ## "\nFILE:%s\nLINE:%d",__LINE__,__FILE__).c_str()
 
 template<typename _base, typename _child>
 class DataStructException: public _base{

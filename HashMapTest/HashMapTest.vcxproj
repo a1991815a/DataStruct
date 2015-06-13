@@ -84,7 +84,10 @@
     <ClInclude Include="HashMap.h" />
     <ClInclude Include="MemoryException.h" />
     <ClInclude Include="MemoryHandle.h" />
+    <ClInclude Include="NullPointerException.h" />
+    <ClInclude Include="OperateException.h" />
     <ClInclude Include="OutRangeException.h" />
+    <ClInclude Include="OverFloatException.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="string_utils.h" />

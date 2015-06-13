@@ -9,7 +9,7 @@
 
 
 #define THROW_MEMORY_EXCEPTION					\
-MemoryException::throwException("memory is not enough!")
+MemoryException::throwException(THROW_EXCEPTION("memory is not enough!"))
 
 #define CHECK_MEMORY(p, new_p)			\
 p = new_p;								\

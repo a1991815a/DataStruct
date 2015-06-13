@@ -34,7 +34,7 @@ public:
 	std::string toString(const float _float) const;
 
 //格式化工具
-	std::string format(const std::string& str, ...) const;
+	std::string format(const std::string str, ...) const;
 	std::string vformat(const std::string& str, va_list ap) const;
 private:
 	FormatTypes judgeSymbol(const char* _symbol) const;

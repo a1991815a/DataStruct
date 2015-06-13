@@ -6,7 +6,9 @@
 */
 #include "DataStructException.h"
 
-#define THROW_OUTRANGE_EXCEPTION OutRangeException::throwException("out of range!")
+#define THROW_OUTRANGE_EXCEPTION(CONDITION)								\
+if(!(CONDITION))															\
+	OutRangeException::throwException(THROW_EXCEPTION("out of range!"))
 
 class OutRangeException: public DataStructException<std::out_of_range, OutRangeException>{
 public:

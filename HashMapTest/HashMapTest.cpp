@@ -10,19 +10,28 @@
 #include <string>
 using namespace std;
 
-#define PING_LINE(A) 
+#define PING_LINE() \
+SSUtils->format("行数%d,文件%s",__LINE__,__FILE__)
 
-#define PRINT_LINE(A) cout << A << endl
-
-string&& moveS(string& a){
-	return std::move(a);
+string&& moveS(){
+	string aa = "bb";
+	return std::forward<string>(aa);
 }
 
 int _tmain(int argc, _TCHAR* argv[])
 {
-	string bb = SSUtils->format("likeqin %d, %s",5, "bb" );
+	cout << __FILE__ << endl;
+	string bb = PING_LINE();
+
 	cout << bb.c_str() << endl;
-	
+
+	function<void(void)> ss = [](){
+		cout << "aa" << endl;
+	};
+
+	ss();
+
+
 	_getch();
 	return 0;
 }

@@ -49,7 +49,14 @@ private:
 template<typename _dTy>
 typename Stack<_dTy>::value_type Stack<_dTy>::pop()
 {
-
+	THROW_OUTRANGE_EXCEPTION(mi_size != 0);
+	Node* node = mp_top;
+	value_type val = node->data;
+	mp_top = mp_top->next;
+	delete node;
+	node = nullptr;
+	mi_size--;
+	return val;
 }
 
 template<typename _dTy>
@@ -57,14 +64,16 @@ void Stack<_dTy>::push(const_refence val)
 {
 	Node* node = nullptr;
 	CHECK_MEMORY(node, new Node(val));
-	
+
 	if(IS_NULL(mp_top))
 	{
 		mp_top = val;
+		mi_size++;
 		return;
 	}
 	node->next = mp_top;
 	mp_top = node;
+	mi_size++;
 }
 
 #endif

@@ -66,6 +66,15 @@
     <ClInclude Include="string_utils.h">
       <Filter>字符串转换工具</Filter>
     </ClInclude>
+    <ClInclude Include="NullPointerException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
+    <ClInclude Include="OverFloatException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
+    <ClInclude Include="OperateException.h">
+      <Filter>异常</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

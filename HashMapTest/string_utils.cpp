@@ -47,7 +47,7 @@ std::string string_utils::toString(const int _int) const
 	std::stringstream ss;
 	ss << _int;
 	ss >> str;
-	return str;
+	return std::forward<std::string>(str);
 }
 
 std::string string_utils::toString(const float _float) const
@@ -56,16 +56,16 @@ std::string string_utils::toString(const float _float) const
 	std::stringstream ss;
 	ss << _float;
 	ss >> str;
-	return str;
+	return std::forward<std::string>(str);
 }
 
-std::string string_utils::format(const std::string& str, ...) const
+std::string string_utils::format(const std::string str, ...) const
 {
 	va_list ap;
 	va_start(ap, str);
 	std::string out_text = vformat(str, ap);
 	va_end(ap);
-	return std::move(out_text);
+	return std::forward<std::string>(out_text);
 }
 
 std::string string_utils::vformat(const std::string& str, va_list ap) const
@@ -74,7 +74,7 @@ std::string string_utils::vformat(const std::string& str, va_list ap) const
 	int offset = 0;
 	int left = 0;
 	FormatTypes type = UNKNOW;
-	while ((type = searchSymbol(str.c_str(), str.size(), offset)) != UNKNOW && offset < str.size())
+	while ((type = searchSymbol(str.c_str(), str.size(), offset)) != UNKNOW)
 	{
 		out_text += str.substr(left, offset - left - 2);
 		left = offset;
@@ -84,7 +84,7 @@ std::string string_utils::vformat(const std::string& str, va_list ap) const
 			out_text += parseString(va_arg(ap, int));
 			break;
 		case string_utils::FLOAT:
-			out_text += parseString(va_arg(ap, float));
+			out_text += parseString((float)va_arg(ap, double));
 			break;
 		case string_utils::STRING:
 			out_text += va_arg(ap, const char*);
@@ -94,7 +94,7 @@ std::string string_utils::vformat(const std::string& str, va_list ap) const
 			break;
 		}
 	}
-	return std::move(out_text);
+	return std::forward<std::string>(out_text);
 }
 
 string_utils::FormatTypes string_utils::judgeSymbol(const char* _symbol) const
